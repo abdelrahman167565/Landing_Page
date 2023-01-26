@@ -17,7 +17,9 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
+/* html{
+    scroll-behavior: smooth;
+} */
 
 /* Typeography General*/
 h1 {
@@ -73,8 +75,11 @@ section {
 .navbar__menu li {
     display: inline-block;
 }
+/* .setNavActive:active {
+    background-color: lightblue; 
+    } */
 
-.navbar__menu .menu__link {
+.navbar__menu .menu__link  {
     display: block;
     padding: 1em;
     font-weight: bold;
@@ -87,6 +92,11 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
+
+/* edit*/
+.menu__link.active {
+   background-color: aqua;
+} 
 
 /* Header Styles */
 .page__header {
@@ -207,7 +217,16 @@ section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
-
+#scrollUpButton{
+    background-color: #eee;
+    border-radius: .5em;
+    padding: 20px;
+    font-size: 18px;
+    position: fixed;
+    bottom:20;
+    right: 20;
+    display:none;
+}
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
