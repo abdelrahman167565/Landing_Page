@@ -72,11 +72,16 @@ window.addEventListener("scroll", (scrollevent) => {
     document.getElementById("scrollUpButton").style.display = "none";
   }
   sections.forEach((element) => {
+    let currLi=navList.querySelector(`[data-nav=${element.id}]`);
     const top = element.getBoundingClientRect().top;
     if (top >= -100 && top <= 200) {
       element.classList.add("your-active-class");
+     currLi.classList.add(activeSec);
     } else {
       element.classList.remove("your-active-class");
+      currLi.classList.remove(activeSec);
+
+      //setActiveSecNav(element.target.id);
     }
   });
 });
